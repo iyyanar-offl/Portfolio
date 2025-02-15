@@ -1,0 +1,21 @@
+.dflex {
+    display: flex;
+}
+
+.directionColumn {
+    flex-direction: column;
+}
+
+.alignCenter {
+    align-items: center;
+}
+
+.flexible {
+    flex-grow: 1;
+    min-height: 0;
+    min-width: 0;
+}
+
+.noShrink {
+    flex-shrink: 0;
+}
