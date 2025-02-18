@@ -131,11 +131,11 @@ header {
 
 
 /* skills */
-.skillsContainer {
+.skillsContainer, .projectsContainer {
     margin-top: 150px;
 }
 
-.skillsHeading {
+.skillsHeading, .projectsHeading {
     font-size: 35px;
     text-align: center;
     margin-block: 0;
@@ -162,4 +162,11 @@ header {
 .skillText {
     margin-top: 10px;
     font-weight: var(--font_semibold);
+}
+
+
+
+
+.footer {
+    
 }
