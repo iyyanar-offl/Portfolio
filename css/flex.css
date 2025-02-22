@@ -24,10 +24,14 @@
     flex-wrap: wrap;
 }
 
+.justifyCenter, .alignBoth {
+    justify-content: center;
+}
+
 .justifyBetween {
     justify-content: space-between;
 }
 
-.justifyEvenly, .alignBoth {
+.justifyEvenly {
     justify-content: space-evenly;
 }
