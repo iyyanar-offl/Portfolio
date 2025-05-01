@@ -268,7 +268,7 @@ header {
     list-style: none;
 }
 .experienceList {
-    height: 150px;
+    height: 175px;
 }
 .expCircle {
     height: 10px;
@@ -276,18 +276,68 @@ header {
     background-color: var(--theme_bg);
     border-radius: 50%;
     position: relative;
+    margin: 20px 24px 0;
 }
 
 .expLine::after {
     content: '';
     position: absolute;
-    height: 150px;
+    height: 175px;
     background-color: #b2c1ce;
     width: 2px;
     top: 100%;
     left: 4px;
 }
 
+.expYear {
+    font-weight: var(--font_semibold);
+    color: var(--theme_bg);
+    font-size: 18px;
+    word-spacing: 5px;
+    margin-top: 13px;
+}
+
+.expData {
+    width: 45%;
+}
+
+.expCompanyDatabox {
+    height: 132px;
+    max-width: 420px;
+    background-color: var(--white_bg);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 12px;
+    display: inline-block;
+}
+
+.expCompanyDatabox.onRight {
+    border-left: 8px solid rgb(215, 215, 215);
+}
+
+.expCompanyDatabox.onLeft {
+    border-right: 8px solid rgb(215, 215, 215);
+    text-align: right;
+}
+
+.expCompanyAddress {
+    margin-top: 4px;
+    -webkit-line-clamp: 2; /* Clamp to 2 lines */
+}
+
+.expCompanyDesc {
+    color: var(--description-text);
+    margin-top: 12px;
+    line-height: 1.4;
+    -webkit-line-clamp: 2; /* Clamp to 2 lines */
+}
+
+.expRole {
+    font-weight: var(--font_semibold);
+    font-size: 18px;
+    color: #414141;
+    -webkit-line-clamp: 2; /* Clamp to 2 lines */
+}
 
 /* footer */
 footer {
