@@ -14,6 +14,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: system-ui;
@@ -27,10 +31,17 @@ header, footer {
 
 header {
     background-color: var(--theme_bg);
-    /* box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1); */
     position: sticky;
     top: 0;
     z-index: 1;
+    --header_text: var(--white_text);
+}
+
+header.scrolled {
+    --header_text: #414141;
+    background-color: var(--white_bg);
+    box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1);
+    transition: background-color .5s;
 }
 
 .section {
@@ -40,7 +51,7 @@ header {
 }
 
 .topSpace {
-    margin-top: 150px;
+    padding-top: 130px;
 }
 
 .headerInner {
@@ -54,6 +65,10 @@ header {
     color: var(--white_text);
 }
 
+.scrolled .head {
+    color: var(--theme_bg);
+}
+
 .headerNav {
     column-gap: 40px;
 }
@@ -65,11 +80,15 @@ header {
     font-weight: var(--font_bold);
     transition: color 0.2s ease-in-out;
     cursor: pointer;
-    color: var(--white_text);
+    color: var(--header_text);
 }
 
 .navLink:hover, .navLink.active {
     color: var(--black_text);
+}
+
+.scrolled .navLink:hover, .scrolled .navLink.active {
+    color: var(--theme_text);
 }
 
 
@@ -187,6 +206,7 @@ header {
 }
 
 .tab {
+    all: unset;
     text-transform: uppercase;
     line-height: 50px;
     cursor: pointer;
@@ -200,19 +220,21 @@ header {
 .tabContentWrapper {
     padding-top: 50px;
     gap: 50px 100px;
+    min-height: 600px;
 }
 
 .projectCard {
-    width: 350px;
     cursor: pointer;
 }
 
 .projectImgCont {
     position: relative;
+    font-size: 0;
 }
 
 .projectImg {
-    width: 100%;
+    width: 350px;
+    height: 300px;
     border-radius: 5px;
 }
 
@@ -303,21 +325,18 @@ header {
 
 .expCompanyDatabox {
     height: 132px;
-    max-width: 420px;
     background-color: var(--white_bg);
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
-    padding: 12px;
-    display: inline-block;
+    padding: 15px;
 }
 
 .expCompanyDatabox.onRight {
-    border-left: 8px solid rgb(215, 215, 215);
+    border-left: 5px solid rgb(215, 215, 215);
 }
 
 .expCompanyDatabox.onLeft {
-    border-right: 8px solid rgb(215, 215, 215);
-    text-align: right;
+    border-right: 5px solid rgb(215, 215, 215);
 }
 
 .expCompanyAddress {

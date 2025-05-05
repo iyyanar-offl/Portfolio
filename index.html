@@ -9,17 +9,18 @@
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
-    <header>
+<body id="home">
+    <header id="header">
         <div class="dflex headerInner section">
             <div class="flexible">
                 <h2 class="head">INR.</h2>
             </div>
             <nav class="headerNav dflex">
-                <a class="navLink dflex alignCenter">home</a>
-                <a class="navLink dflex alignCenter">about</a>
-                <a class="navLink dflex alignCenter">skills</a>
-                <a class="navLink dflex alignCenter">projects</a>
+                <a class="navLink dflex alignCenter" href="#home">home</a>
+                <a class="navLink dflex alignCenter" href="#about">about</a>
+                <a class="navLink dflex alignCenter" href="#skill">skills</a>
+                <a class="navLink dflex alignCenter" href="#experience">experience</a>
+                <a class="navLink dflex alignCenter" href="#project">projects</a>
             </nav>
         </div>
     </header>
@@ -31,17 +32,18 @@
                     <h1 class="nameText">iyyanar</h1>
                     <p class="roleText">web developer</p>
                 </div>
-                <img src="./images/home-right.png" alt="" class="homeImg noShrink"/>
+                <img src="./images/user-original-removebg-preview.png" alt="" class="homeImg noShrink"/>
+                <!-- <img src="./images/home-right.png" alt="" class="homeImg noShrink"/> -->
             </div>
         </section>
-        <section class="aboutContainer section topSpace dflex">
+        <section class="aboutContainer section topSpace dflex" id="about">
             <img src="./images/about-us.png" alt="" class="homeImg noShrink"/>
             <div class="flexible aboutContent">
                 <h2 class="aboutHeading">let’s <br> Introduce about <br> myself</h2>
                 <p class="aboutDescription">Whose given. Were gathered. There first subdue greater. Bearing you Whales heaven midst their. Beast creepeth. Fish days. Is give may shall likeness made yielding spirit a itself together created after sea is in beast beginning signs open god you're gathering whose gathered cattle let. Creature whales fruit unto meat the life beginning all in under give two.</p>
             </div>
         </section>
-        <section class="skillsContainer section topSpace">
+        <section class="skillsContainer section topSpace" id="skill">
             <h2 class="skillsHeading">Skills</h2>
             <div class="skillsWrapper dflex wrap justifyEvenly">
                 <div class="skillBlock">
@@ -78,7 +80,7 @@
                 </div>
             </div>
         </section>
-        <section class="experienceContainer section topSpace">
+        <section class="experienceContainer section topSpace" id="experience">
             <h2 class="experienceHeading">Experience</h2>
             <ul class="expListCont">
                 <li class="experienceList dflex">
@@ -95,7 +97,7 @@
                     </div>
                 </li>
                 <li class="experienceList dflex">
-                    <div class="flexible expData textRight">
+                    <div class="flexible expData">
                         <div class="expCompanyDatabox onLeft">
                             <h2 class="expRole dotted">Zoho Schools of Learning</h2>
                             <address class="expCompanyAddress dotted">Zoho Corpration, Tenkasi, TamilNadu</address>
@@ -109,25 +111,15 @@
                 </li>
             </ul>
         </section>
-        <section class="projectsContainer section topSpace">
+        <section class="projectsContainer section topSpace" id="project">
             <h2 class="projectsHeading">Projects</h2>
             <div class="tabWrapper dflex">
-                <div class="tab active">all</div>
-                <div class="tab">popular</div>
-                <div class="tab">latest</div>
-                <div class="tab">upcoming</div>
+                <button onclick="handleProjectTab('all')" id="all" class="tab active">all</button>
+                <button onclick="handleProjectTab('popular')" id="popular" class="tab">popular</button>
+                <button onclick="handleProjectTab('latest')" id="latest" class="tab">latest</button>
+                <button onclick="handleProjectTab('upcoming')" id="upcoming" class="tab">upcoming</button>
             </div>
-            <div class="tabContentWrapper dflex wrap">
-                <div class="projectCard">
-                    <div class="projectImgCont">
-                        <img src="./images/projects/thiruvalluvar.jpg" alt="" class="projectImg">
-                        <div class="overlayer dflex alignBoth">
-                            <i class="fa-solid fa-arrow-up-right-from-square newTabIcon"></i>
-                        </div>
-                    </div>
-                    <p class="projectText">Thirukkural</p>
-                </div>
-            </div>
+            <div id="tabContent" class="tabContentWrapper dflex wrap"></div>
         </section>
     </main>
     <footer class="dflex justifyCenter">
@@ -138,5 +130,6 @@
             <a class="footerIcon"><i class="fa-solid fa-envelope"></i></a>
         </div>
     </footer>
+    <script src="./script/script.js"></script>
 </body>
 </html>
